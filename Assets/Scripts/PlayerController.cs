@@ -14,11 +14,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (Input.GetKeyDown(KeyCode.F))
         {
             mAnimator.SetTrigger("Hip_Hop_Dance");
         }
-
+        //movement
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             transform.position += -transform.right * 6 * Time.deltaTime;
@@ -42,6 +43,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             transform.position += transform.forward * 6 * Time.deltaTime;
+            mAnimator.SetTrigger("Walk");
         };
 
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.UpArrow) && (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))

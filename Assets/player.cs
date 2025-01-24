@@ -59,10 +59,6 @@ public class player : MonoBehaviour
         };
 
         float mouseXmovement = Input.GetAxis("Mouse X");
-        
-
-        float mouseYmovement = Input.GetAxis("Mouse Y");
-
 
         transform.Rotate(0, mouseXmovement * 5,0);
         
