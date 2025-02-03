@@ -44,12 +44,19 @@ public class PlayerController : MonoBehaviour
         {
             transform.position += transform.forward * 6 * Time.deltaTime;
             mAnimator.SetTrigger("Walk");
+
+            
         };
+
+        
 
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.UpArrow) && (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
         {
             transform.position += transform.forward * 4 * Time.deltaTime;
+            mAnimator.SetTrigger("Run");
         };
+
+
 
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
